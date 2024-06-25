@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/png" href="https://static.vecteezy.com/system/resources/previews/000/350/766/original/portfolio-vector-icon.jpg">
+
+</head>
+<style>
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 100px 0;
+    background: linear-gradient(to right, #1f4037, #99f2c8);
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+hr {
+    border-top: 2px solid #fff;
+    width: 50px;
+    margin: 10px auto;
+}
+
+#about, #contact {
+    padding: 60px 0;
+    color: white;
+}
+
+#about {
+    background: linear-gradient(to right, #1f4037, #99f2c8);
+    position: relative;
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+#about h2, #contact h2 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+#about .lead {
+    font-size: 1.2em;
+    line-height: 1.8;
+    position: relative;
+    z-index: 2;
+}
+
+#contact {
+    background: linear-gradient(to right, #1f4037, #99f2c8);
+}
+
+footer {
+    padding: 20px 0;
+}
+
+.card {
+    margin-bottom: 30px;
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.nav-link {
+    font-size: 1.1em;
+}
+
+.btn-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.btn-row .btn {
+    transition: all 0.3s ease;
+}
+
+.btn-row .btn:hover {
+    transform: scale(1.1);
+}
+
+#contact .form-group {
+    text-align: left;
+}
+
+#contact .form-control {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#contact .form-control:focus {
+    border-color: #1f4037;
+    box-shadow: 0 0 5px rgba(31, 64, 55, 0.5);
+}
+
+#contact .btn-primary {
+    background-color: #1f4037;
+    border-color: #1f4037;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+#contact .btn-primary:hover {
+    background-color: #144029;
+    border-color: #144029;
+}
+
+.container.text-center h2::after {
+    content: '';
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #1f4037;
+    margin: 20px auto;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #99f2c8;
+}
+
+.project_bg {
+    background-image: linear-gradient(to right, #1f4037, #99f2c8);
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.contact-icons .fa {
+    font-size: 3em;
+    margin: 20px;
+    transition: color 0.3s ease;
+}
+
+.contact-icons .fa:hover {
+    color: #99f2c8;
+}
+
+.contact-icons p {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+@media (max-width: 768px) {
+    .contact-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-icons .col-md-2 {
+        margin-bottom: 30px;
+    }
+}
+/* ----------------- */
+.containerskill {
+            max-width: 800px;
+            margin: 80px auto;
+            text-align: center;
+        }
+
+        .ssssssssss{
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #1f4037;
+        }
+        #skillrow{
+            background-image: linear-gradient(to right, #1f4037, #99f2c8);
+
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .skill {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* background: linear-gradient(135deg, #1f4037, #99f2c8); */
+            transition: transform 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: scale(1.1);
+        }
+
+        .circle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            clip: rect(0, 150px, 150px, 75px);
+            border-radius: 50%;
+            background: conic-gradient(#1f4037 calc(var(--percentage) * 1%), transparent 0);
+            transform: rotate(45deg);
+        }
+
+        .circle::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            /* background: #f8f9fa; */
+            border-radius: 50%;
+        }
+
+        .circle span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: bold;
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-text {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #444;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+
+            .skills {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .skill {
+                margin-bottom: 40px;
+            }
+        }
+</style>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#header">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Header -->
+    <header id="header" class="bg-primary text-white text-center">
+        <div class="container d-flex align-items-center flex-column">
+            <img class="rounded-circle mb-5" src="./assets/IMG_2840.jpg" alt="Profile Picture" width="200">
+            <h1 class="text-uppercase mb-0">TJ AKSHAY KUMAR</h1>
+            <hr class="star-light">
+            <h3 class="font-weight-light mb-0">Full-Stack Developer - MERN Stack - JavaScript Enthusiast</h3>
+            <div class="btn-row mt-4">
+                <a  id="download-cv" href="resume.pdf" class="btn btn-outline-light btn-lg mx-2" target="_blank"><i class="fas fa-file-alt"></i> View Resume</a>
+                <a href="https://github.com/TJ6235?tab=repositories" class="btn btn-outline-light btn-lg mx-2" target="_blank"><i class="fab fa-github"></i> GitHub Repository</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="text-light">
+        <div class="container text-center">
+            <h2 class="text-uppercase text-light">About Me</h2>
+            <hr class="star-dark mb-5">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="lead">Hello! I’m a passionate MERN stack developer with a love for creating dynamic and responsive web applications.
+                         My skills include MongoDB, Express.js, React, and Node.js, along with a solid foundation in HTML, CSS, and JavaScript.
+                          <a href="https://www.linkedin.com/feed/" target="_blank" class="btn btn-outline-light btn-lg mx-2 mt-4">
+                            <i class="fab fa-linkedin"></i> Tj Akshay Kumar</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- skills section  -->
+     <div class="row" id="skillrow">
+    <div class="containerskill">
+        <h1 class="ssssssssss text-light">My Skills</h1>
+        <hr class="star-dark mb-5">
+        <div class="skills">
+            <div class="skill">
+               <img src="https://th.bing.com/th/id/R.8836210f6f589d2b13c31194c56a390e?rik=kWxl8dLYXRWxng&riu=http%3a%2f%2faux.iconspalace.com%2fuploads%2f16462271581931937339.png&ehk=aru90P5tNQHHzHp75mtFv8EhFvV7FW67B4YndQIDKOs%3d&risl=&pid=ImgRaw&r=0 " height="100px" width="100px" alt="">
+            </div>
+
+            <div class="skill">
+                <img src="https://saddamhussain.com.np/wp-content/uploads/2024/01/Untitled-design-4.png" height="100px" width="100px" alt="">
+            </div>
+
+            <div class="skill">
+                <img src="https://brandlogos.net/wp-content/uploads/2021/09/bootstrap-logo.png" height="100px" width="100px" alt="">
+
+            </div>
+
+            <div class="skill">
+                <img src="https://pngimg.com/uploads/github/github_PNG68.png" height="100px" width="100px" alt="">
+
+            </div>
+
+            <div class="skill">
+                <img src="https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Emblem.png" height="100px" width="160px" alt="">
+
+            </div>
+
+            <div class="skill">
+                <img src="https://i.pinimg.com/originals/01/e5/00/01e500fca29c045d432b64f285f9c229.png" height="100px" width="100px" alt="">
+
+            </div>
+
+            <div class="skill">
+                <img src="https://mobilemancerblog.blob.core.windows.net/blog/2020/08/vs-code-logo-transp.png" height="100px" width="100px" alt="">
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    <!-- Projects Section -->
+    <section id="projects" class=" project_bg text-white">
+        <div class="container text-center">
+            <h2 class="text-uppercase">Projects</h2>
+            <hr class="star-light mb-5">
+            <div class="row">
+                <!-- Project 1 -->
+                <div class="col-md-3">
+                    <div class="card bg-dark text-white shadow">
+                        <img class="card-img-top" src="https://wallpaperaccess.com/full/1564373.jpg" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Calculator</h5>
+                            <p class="card-text">A simple and usefull Calculator app </p>
+                            <p></p>
+                            <a href="https://github.com/TJ6235/calculator" class="btn btn-outline-light btn-lg mx-2"><i class="fa-brands fa-github p-2"></i>View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="col-md-3">
+                    <div class="card bg-dark text-white shadow">
+                        <img class="card-img-top" src="https://play-lh.googleusercontent.com/Zw2EmfHE_pUKtdMhHOOIn__DdsgKsd82guAvC5ei6WLjdMpqToe2LxE7_4TBvHe_s6c" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Travel App</h5>
+                            <p class="card-text">An interactive Travel application.</p>
+                            <a href="https://github.com/TJ6235/travelguide" class="btn btn-outline-light btn-lg mx-2"><i class="fa-brands fa-github p-2"></i>View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="col-md-3">
+                    <div class="card bg-dark text-white shadow">
+                        <img class="card-img-top" src="https://img.freepik.com/free-photo/clock-face-glowing-midnight-time-up-generative-ai_188544-9607.jpg" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Clock App</h5>
+                            <p class="card-text">An app  to View an Usefull Clock</p>
+                            <a href="https://github.com/TJ6235/clock_task" class="btn btn-outline-light btn-lg mx-2"><i class="fa-brands fa-github p-2"></i>View Project</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="col-md-3">
+                    <div class="card bg-dark text-white shadow">
+                        <img class="card-img-top" src="https://static.asianpaints.com/content/dam/asian_paints/blog/colour-combination/10-latest-wallpaper-designs-for-your-home/tribal-wallpaper-for-home.jpg" alt="Project 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Furniture App</h5>
+                            <p class="card-text">A responsive app for a Furniture Store.</p>
+                            <a href="https://github.com/TJ6235/furniture_task" class="btn btn-outline-light btn-lg mx-2"><i class="fa-brands fa-github p-2"></i>View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="text-light">
+        <div class="container text-center">
+            <h2 class="text-uppercase">Contact</h2>
+            <hr class="star-dark mb-5">
+            <div class="row justify-content-center contact-icons">
+                <div class="col-md-2">
+                    <a href="mailto:akshaykumar.00@outlook.com" target="_blank" class="text-light"><i class="fas fa-envelope"></i></a>
+                    <p class="mt-2">Email</p>
+                    <p><a href="">tjakshay188@gmail.com</a></p>
+                </div>
+                <div class="col-md-2">
+                    <a href="https://www.linkedin.com/in/akshay-kumar-7095791a9" target="_blank" class="text-light"><i class="fab fa-linkedin"></i></a>
+                    <p class="mt-2">LinkedIn</p>
+                    <a href="https://www.linkedin.com/feed/">https://www.linkedin.com/feed/</a>
+                </div>
+                <div class="col-md-2">
+                    <a href="tel:+1234567890" class="text-light"><i class="fas fa-phone"></i></a>
+                    <p class="mt-2">Phone</p>
+                    <p style="color: rgb(0, 119, 255);">+91-6235355721</p>
+                </div>
+                <div class="col-md-2">
+                    <a href="https://github.com/TJ6235" target="_blank" class="text-light"><i class="fab fa-github"></i></a>
+                    <p class="mt-2">GitHub</p>
+                    <a href="https://github.com/TJ6235?tab=repositories">https://github.com/TJ6235?tab=repositories</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2023 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<script>
+    document.getElementById('download-cv').addEventListener('click', function() {
+        var link = document.createElement('a');
+        link.href = './assets/tjcv.pdf';  // Path to your CV file
+        link.download = 'TjAkshay_CV.pdf';  // Name of the file after downloading
+        link.click();
+    });
+</script>
+</html>
